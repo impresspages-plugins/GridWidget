@@ -10,7 +10,7 @@ class Worker
     {
         $sql = '
         CREATE TABLE IF NOT EXISTS
-           ' . ipTable(\Plugin\GridWidget\Model::TABLE_NAME) . '
+           ' . ipTable(\Plugin\GridWidget\Config::TABLE_NAME) . '
         (
         `id` int(11) NOT NULL AUTO_INCREMENT,
         `itemOrder` double,

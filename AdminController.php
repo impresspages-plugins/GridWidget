@@ -24,6 +24,11 @@ class AdminController
      */
     public function widgetPopupHtml()
     {
+        $versionParts = explode('.', \Ip\Application::getVersion());
+        if (empty($versionParts[2]) || $versionParts[0] < 4 || $versionParts[0] == 4 && $versionParts[1] < 2 ||  $versionParts[0] == 4 && $versionParts[1] = 2 && $versionParts[2] < 1) {
+            return new \Ip\Response('This widget can be used on ImpressPages 4.2.1 or later.');
+        }
+
         $widgetId = ipRequest()->getQuery('widgetId');
         $widgetRecord = \Ip\Internal\Content\Model::getWidgetRecord($widgetId);
         $widgetData = $widgetRecord['data'];
@@ -56,34 +61,7 @@ class AdminController
         $widgetId = ipRequest()->getQuery('widgetId');
 
         ipAddCss('assets/gridManagement.css');
-        $config = array(
-            'title' => 'Items',
-            'table' => Model::TABLE_NAME,
-            'sortField' => 'itemOrder',
-            'createPosition' => 'top',
-            'createFilter' => function($data) {
-                $data['widgetId'] = ipRequest()->getQuery('widgetId');
-                return $data;
-            },
-            'fields' => array(
-                array(
-                    'label' => 'Title',
-                    'field' => 'title',
-                    'validators' => array('Required')
-                ),
-                array(
-                    'label' => 'Image',
-                    'field' => 'image',
-                    'type' => 'RepositoryFile'
-                ),
-                array(
-                    'label' => 'Visible',
-                    'field' => 'isVisible',
-                    'type' => 'Checkbox',
-                    'defaultValue' => 1
-                )
-            )
-        );
+        $config = Config::grid();
 
 
         if (!empty($widgetId)) {

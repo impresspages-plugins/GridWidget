@@ -15,7 +15,6 @@ namespace Plugin\GridWidget;
 
 
 class Model {
-    const TABLE_NAME = 'grid_widget';
 
     public static function widgetItems($widgetId, $visibleOnly = true)
     {
@@ -25,19 +24,19 @@ class Model {
         if ($visibleOnly) {
             $params['isVisible'] = 1;
         }
-        return ipDb()->selectAll(self::TABLE_NAME, '*', $params, ' ORDER BY `itemOrder` asc');
+        return ipDb()->selectAll(Config::TABLE_NAME, '*', $params, ' ORDER BY `itemOrder` asc');
     }
 
 
 
     public static function addItem($data)
     {
-        ipDb()->insert(self::TABLE_NAME, $data);
+        ipDb()->insert(Config::TABLE_NAME, $data);
     }
 
     public static function removeWidgetItems($widgetId)
     {
-        return ipDb()->delete(self::TABLE_NAME, array('widgetId' => $widgetId));
+        return ipDb()->delete(Config::TABLE_NAME, array('widgetId' => $widgetId));
     }
 
 }
