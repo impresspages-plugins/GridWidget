@@ -7,6 +7,8 @@ By default this widget creates a table in the database. When you add new widget,
 
 *Modify Config.php to your needs.*
 
+You can make several plugins based on this. Just replace GridWidget to your own name in all files (INCLUDING FOLDER NAMES), change table name constant in Config.php and you are ready to go.
+
 ##Installation
 - Create Plugin/GridWidget directory
 - Copy repository files to create dir
