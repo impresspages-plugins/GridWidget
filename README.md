@@ -13,7 +13,7 @@ You can make several plugins based on this. Just replace GridWidget to your own 
 - Create Plugin/GridWidget directory
 - Copy repository files to create dir
 - Activate plugin in plugins section of admin
-- Modify Config.php and Widget/GridWidget/skin/default.php to your needs
+- Modify **Config.php** and **Widget/GridWidget/skin/default.php** to your needs
 
 ##Usage
 - Add new widget
