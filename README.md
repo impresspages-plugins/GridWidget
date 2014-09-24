@@ -7,7 +7,7 @@ Modify Config.php to your needs.
 ##Installation
 - Create Plugin/GridWidget directory
 - Copy repository files to create dir
-- Login to admin and actiuvate plugin in  plugins section
+- Activate plugin in plugins section of admin
 - Modify Config.php and Widget/GridWidget/skin/default.php to your needs
 
 ##Usage
