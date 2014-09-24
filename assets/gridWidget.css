@@ -1,0 +1,30 @@
+.ipPluginGridWidgetPopup iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+.ip.ipPluginGridWidgetPopup .modal-dialog {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+
+.ip.ipPluginGridWidgetPopup .modal-content {
+    height: 100%;
+    border-radius: 0;
+    border: none;
+}
+
+.ip.ipPluginGridWidgetPopup .modal-footer {
+    margin-top: -50px;
+}
+
+.ip.ipPluginGridWidgetPopup .modal-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
