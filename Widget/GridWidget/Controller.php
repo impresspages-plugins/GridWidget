@@ -35,7 +35,7 @@ class Controller extends \Ip\WidgetController
      */
     public function duplicate($oldId, $newId, $data)
     {
-        $oldItems = Model::widgetItems($oldId);
+        $oldItems = Model::widgetItems($oldId, false);
         foreach($oldItems as $item) {
             $item['widgetId'] = $newId;
             unset($item['id']);
