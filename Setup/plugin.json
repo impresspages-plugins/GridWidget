@@ -1,6 +1,6 @@
 {
     "title": "Grid widget",
-    "version": "1.00",
+    "version": "1.01",
     "name": "GridWidget",
     "description": "Example plugin to build your own widgets on top of it. Just add required GRID config and modify widget's skin to get your own unique widget.",
     "author": "ImpressPages"
