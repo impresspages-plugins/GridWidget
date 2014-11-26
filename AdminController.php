@@ -25,7 +25,7 @@ class AdminController
     public function widgetPopupHtml()
     {
         $versionParts = explode('.', \Ip\Application::getVersion());
-        if (empty($versionParts[2]) || $versionParts[0] < 4 || $versionParts[0] == 4 && $versionParts[1] < 2 ||  $versionParts[0] == 4 && $versionParts[1] = 2 && $versionParts[2] < 1) {
+        if (version_compare(\Ip\Application::getVersion(), '4.2.1') < 0) {
             return new \Ip\Response('This widget can be used on ImpressPages 4.2.1 or later.');
         }
 
