@@ -41,6 +41,7 @@ class Controller extends \Ip\WidgetController
             unset($item['id']);
             Model::addItem($item);
         }
+        return $data;
     }
 
 
